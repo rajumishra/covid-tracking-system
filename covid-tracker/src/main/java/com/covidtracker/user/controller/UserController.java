@@ -24,12 +24,5 @@ public class UserController {
 	{
 		userBO.saveUser(userDTO);
 	}
-	
-	@CrossOrigin(origins = "http://localhost:3000")
-	@RequestMapping(method=RequestMethod.POST, value = "/custom_login")
-	public String login()
-	{
-		return "Authenticated";
-	}
 
 }

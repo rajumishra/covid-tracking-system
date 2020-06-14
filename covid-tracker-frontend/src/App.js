@@ -2,9 +2,9 @@ import React from 'react';
 import logo from './logo.svg';  
 import './App.css';  
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Login from './Login';  
-import Signup from './Signup'; 
-import DashBoard from './DashBoard';   
+import Login from './pages/login';  
+import Signup from './pages/signup'; 
+import DashBoard from './pages/dashboard';   
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';   
 function App() {  
   return (  
@@ -14,9 +14,9 @@ function App() {
         <div className="container">
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              {/*<li className="nav-item">
                 <Link className="nav-link" to={"/login"}>Login</Link>
-              </li>
+              </li>*/}
               <li className="nav-item">
                 <Link className="nav-link" to={"/signup"}>Sign up</Link>
               </li>
@@ -28,8 +28,8 @@ function App() {
         </div>
       </nav><br />    
         <Switch> 
-          <Route exact path='/' component={Login} />
-          <Route exact path='/Login' component={Login} />         
+          <Route exact path='/' component={DashBoard} />
+          <Route exact path='/Login' component={DashBoard} />         
           <Route exact path='/Signup' component={Signup} />       
           <Route exact path='/DashBoard' component={DashBoard} />      
         </Switch>    

@@ -26,7 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable();
 		http.authorizeRequests().antMatchers("/covidCount/**").fullyAuthenticated().and().httpBasic();
-		http.formLogin().loginPage("/login");
+		http.formLogin().loginPage("/login").defaultSuccessUrl("/dashboard",true);
 	}
 
 }
